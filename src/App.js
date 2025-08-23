@@ -3,21 +3,13 @@ import { Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
 import Cart from "./pages/Cart";
+import NavDrop from "./components/Nav";
 
 function App() {
   return (
     <div className="App">
-      <ul>
-        <li>
-          <Link to={"/"}>Home</Link>
-        </li>
-        <li>
-          <Link to="/category">Category</Link>
-        </li>
-        <li>
-          <Link to="/cart">Cart</Link>
-        </li>
-      </ul>
+      <NavDrop>
+      </NavDrop>
       <main>
         <div className="container">
           <Routes>
