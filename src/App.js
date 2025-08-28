@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Category from "./pages/Category";
 import Cart from "./pages/Cart";
 import NavDrop from "./components/Nav";
+import Forecast from "./pages/Forecast";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="" Component={Home} />
             <Route path="/category" Component={Category}/>
             <Route path="/cart" Component={Cart}/>
+            <Route path="/forecast" Component={Forecast}/>
           </Routes>
         </div>
       </main>

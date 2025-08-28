@@ -21,6 +21,11 @@ function NavDrop() {
           Cart
         </Nav.Link>
       </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as ={Link} to="/forecast">
+          Forecast
+        </Nav.Link>
+      </Nav.Item>
     </Nav>
   );
 }
