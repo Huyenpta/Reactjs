@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+
+/* Thêm hiệu ứng mượt mà cho các đối tượng */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none; /* Bỏ viền mặc định của card */
+}
+
+/* Hiệu ứng khi di chuột vào card sản phẩm hoặc tin tức */
+.card:hover {
+  transform: translateY(-10px); /* Nâng card lên một chút */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ để nổi bật */
+}
+
+/* Căn chỉnh lại chiều cao ảnh trong card tin tức cho đồng đều */
+.news-card-img {
+  height: auto;
+  object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không bị méo */
+}
+
+/* Tăng kích thước và độ nổi bật cho Brand/Logo */
+.navbar-brand {
+    font-size: 1.75rem !important;
+    font-weight: bold;
+    color: #198754 !important; /* Dùng màu xanh success cho đồng bộ */
+}
+
+.caption-left {
+  text-align: left !important;
+  left: 15% !important; /* Tùy chỉnh vị trí từ bên trái */
+  right: auto !important;
+}
+
+.banner-full-screen {
+  height: calc(100vh - 140px); /* 56px là chiều cao trung bình của một navbar Bootstrap */
+  /* Các thuộc tính khác giữ nguyên */
+  display: flex;
+  align-items: center;
+}
+
+/* Tùy chỉnh thêm để nội dung banner hiển thị đẹp hơn */
+.banner-full-screen .carousel-caption {
+  position: static; /* Thay đổi vị trí để có thể căn giữa bằng Flexbox */
+  width: 100%;
+  text-align: center; /* Căn giữa chữ */
+  top: auto;
+  bottom: auto;
+}
+
+#home {
+  display: flex; /* Bật Flexbox cho container chính */
+  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+}
+
+.banner-section {
+  flex-grow: 1; /* Cho phép banner chiếm hết không gian còn lại */
+  display: flex; /* Bật Flexbox để căn giữa nội dung bên trong */
+  align-items: center;
+  justify-content: center;
+}
+
+
+.custom-carousel-caption {
+    /* Sử dụng các thuộc tính để định vị và căn chỉnh */
+    position: absolute;
+    top: 50%; /* Điều chỉnh để đẩy caption xuống một chút */
+    transform: translateY(-50%);
+    left: 12% !important; /* Căn lề trái 5% */
+    width: 40%; /* Đặt chiều rộng cụ thể để tránh tràn */
+    height: max-content;
+    /* Thêm các hiệu ứng bạn muốn */
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: #fff;
+    padding: 1.5rem 2rem; /* Giảm padding để khung nền nhỏ gọn */
+    text-align: center;
+}
+
+.custom-carousel-caption h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.custom-carousel-caption p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}

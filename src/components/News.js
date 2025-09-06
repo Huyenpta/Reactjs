@@ -11,22 +11,24 @@ function News() {
   ];
 
   return (
-    <section className="container content my-5">
-      <h2 className="text-center text-success">Tin tức & Khuyến mãi</h2>
-      <p className="text-center text-muted">Tin tức & Khuyến mãi của cửa hàng</p>
-
-      <div className="d-flex justify-content-center flex-wrap g-4">
-        {news.map((n, idx) => (
-          <div className="col-md-3 col-sm-6 p-2 mx-auto" key={idx}>
-            <div className="card h-100">
-              <img src={n.img} className="card-img-top" alt={n.title} />
-              <div className="card-body">
-                <p className="card-text text-center">{n.title}</p>
+    <section className="content my-5">
+      <div className="container">
+        <h2 className="text-center text-success">SẢN PHẨM KHUYẾN MÃI</h2>
+        <div className="row justify-content-center g-4">
+          {news.map((n, idx) => (
+            <div className="col-md-3 col-sm-6 p-2" key={idx}>
+              <div className="card h-100">
+                {/* Thêm class 'news-card-img' vào đây */}
+                <img src={n.img} className="card-img-top news-card-img" alt={n.title} />
+                <div className="card-body">
+                  <p className="card-text text-center fw-bold">{n.title}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
     </section>
   );
 }
