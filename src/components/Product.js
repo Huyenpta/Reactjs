@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 function Product() {
   const products = [
-    { img: "/images/Tea1.jpg", title: "Trà Oolong", desc: "Bộ Sưu Tập Trà Oolong – Khám Phá Nét Đẹp Văn Hóa Truyền Thống.", link: "/oolong" },
-    { img: "/images/Tea2.jpg", title: "Trà đen", desc: "Bộ Sưu Tập Trà Đen - Giữ trọn nguyên bản, đậm vị từng khoảnh khắc.",link: "/den" },
-    { img: "/images/Tea3.jpg", title: "Trà xanh", desc: "Bộ Sưu Tập Trà Xanh - Trong lành từ bên trong!", link: "/xanh" }
+    { img: "images/Tea1.jpg", title: "Trà Oolong", desc: "Bộ Sưu Tập Trà Oolong – Khám Phá Nét Đẹp Văn Hóa Truyền Thống.", link: "/oolong" },
+    { img: "images/Tea2.jpg", title: "Trà đen", desc: "Bộ Sưu Tập Trà Đen - Giữ trọn nguyên bản, đậm vị từng khoảnh khắc.",link: "/den" },
+    { img: "images/Tea3.jpg", title: "Trà xanh", desc: "Bộ Sưu Tập Trà Xanh - Trong lành từ bên trong!", link: "/xanh" }
   ];
 
   return (
