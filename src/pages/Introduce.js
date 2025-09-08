@@ -24,7 +24,7 @@ function Introduce() {
 
                 <Row className="mb-5">
                     <Col md={6}>
-                        <img src="/images/history.webp" alt="Lịch sử trà" className="img-fluid rounded-3 shadow" />
+                        <img src="images/history.webp" alt="Lịch sử trà" className="img-fluid rounded-3 shadow" />
                     </Col>
                     <Col md={6} className="d-flex flex-column justify-content-center text-start">
 
@@ -42,7 +42,7 @@ function Introduce() {
 
                 <Row className="text-start mb-5">
                     <Col md={6} className="d-flex flex-column justify-content-center order-md-2">
-                        <img src="/images/traxanh.jpg" alt="Lợi ích của trà" className="img-fluid rounded-3 shadow" />
+                        <img src="images/traxanh.jpg" alt="Lợi ích của trà" className="img-fluid rounded-3 shadow" />
                     </Col>
                     <Col md={6} className="order-md-1">
                         <h3>Lợi ích sức khỏe của trà</h3>
