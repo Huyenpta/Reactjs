@@ -90,12 +90,15 @@
 }
 
 .banner-section {
-  flex-grow: 1; /* Cho phép banner chiếm hết không gian còn lại */
-  display: flex; /* Bật Flexbox để căn giữa nội dung bên trong */
+  width: 100%;
   align-items: center;
   justify-content: center;
 }
 
+.banner-section img {
+  width: 100%;   /* full theo chiều ngang màn hình */
+  object-fit: cover; /* giữ tỉ lệ hình ảnh, không bị méo */
+}
 
 .custom-carousel-caption {
     /* Sử dụng các thuộc tính để định vị và căn chỉnh */

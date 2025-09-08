@@ -1,13 +1,13 @@
 import Banner from "../components/Banner";
-import News from "../components/News";
 import Product from "../components/Product";
+import SPBanChay from "../components/SPBanChay";
 
 function Home() {
     return (
         <>
             <Banner />
             <Product/>
-            <News />
+            <SPBanChay/>
         </>
     );
 }

@@ -11,28 +11,45 @@ function Introduce() {
                         <p className="lead">Hành trình khám phá hương vị tinh túy từ thiên nhiên</p>
                     </Col>
                 </Row>
+                <Row className="text-start mb-5">
+                    <Col>
+                        <h3>Lịch Sử Trà Ở Việt Nam</h3>
+
+                        <p>Tại Việt Nam, trà xuất hiện từ rất sớm và nhanh chóng trở thành một phần trong đời sống tinh thần của người Việt. Từ thời phong kiến, trà không chỉ là thức uống thường ngày mà còn gắn liền với lễ nghi, văn hóa ứng xử và nghệ thuật thưởng trà.</p>
+
+                        <p>Người xưa coi uống trà là một thú tao nhã, gắn với nếp sống thanh tịnh của nho sĩ, tao nhân mặc khách. Qua mỗi chén trà, người ta tìm thấy sự tĩnh tại, thảnh thơi và cơ hội sẻ chia trong những cuộc đàm đạo.</p>
+
+                    </Col>
+                </Row>
 
                 <Row className="mb-5">
                     <Col md={6}>
                         <img src="/images/history.webp" alt="Lịch sử trà" className="img-fluid rounded-3 shadow" />
                     </Col>
-                    <Col md={6} className="d-flex flex-column justify-content-center">
-                        <h3>Nguồn gốc và lịch sử</h3>
-                        <p>
-                            Trà là một trong những loại đồ uống lâu đời nhất thế giới, có nguồn gốc từ Trung Quốc và được phát hiện cách đây hơn 5000 năm. Truyền thuyết kể rằng, Hoàng đế Thần Nông đã vô tình khám phá ra trà khi một chiếc lá rơi vào cốc nước nóng của ông. Từ đó, trà trở thành một phần không thể thiếu của văn hóa Á Đông và lan tỏa ra toàn cầu.
-                        </p>
+                    <Col md={6} className="d-flex flex-column justify-content-center text-start">
+
+                        <p><b>Trải qua nhiều thế kỷ, Việt Nam hình thành nên những vùng trà nổi tiếng như:</b></p>
+
+                        <p>- Trà Thái Nguyên – được mệnh danh là “đệ nhất danh trà” bởi hương cốm đặc trưng, vị chát dịu và hậu ngọt.</p>
+
+                        <p>- Trà sen Hồ Tây – tinh hoa của Hà Nội xưa, khi từng bông sen được ướp với trà, tạo nên hương vị thanh tao, quý phái.</p>
+
+                        <p>- Trà Shan Tuyết – mọc trên những cây chè cổ thụ hàng trăm năm tuổi ở Hà Giang, Yên Bái, với vị đậm đà, hậu ngọt sâu lắng.</p>
+
+                        <p>Ngày nay, uống trà vẫn là một thói quen văn hóa của người Việt, từ những buổi sáng ở vùng quê với ấm trà xanh giản dị, cho đến những nghi lễ, dịp tiếp khách trang trọng. Trà không chỉ để thưởng thức mà còn gói ghém trong đó hồn cốt văn hóa và tinh thần gắn kết cộng đồng của dân tộc Việt Nam.</p>
                     </Col>
                 </Row>
 
-                <Row className="mb-5">
+                <Row className="text-start mb-5">
                     <Col md={6} className="d-flex flex-column justify-content-center order-md-2">
                         <img src="/images/traxanh.jpg" alt="Lợi ích của trà" className="img-fluid rounded-3 shadow" />
                     </Col>
                     <Col md={6} className="order-md-1">
                         <h3>Lợi ích sức khỏe của trà</h3>
                         <p>
-                            Uống trà không chỉ là một thói quen mà còn mang lại nhiều lợi ích cho sức khỏe. Trà xanh chứa chất chống oxy hóa mạnh mẽ, giúp giảm nguy cơ mắc các bệnh tim mạch và ung thư. Trà hoa cúc giúp cải thiện giấc ngủ, trong khi trà gừng hỗ trợ tiêu hóa.
+                            Uống trà không chỉ là một thói quen thanh nhã, mà còn mang lại nhiều lợi ích thiết thực cho sức khỏe. Mỗi loại trà đều có đặc tính riêng: trà xanh giàu chất chống oxy hóa giúp giảm nguy cơ tim mạch và ung thư, trà hoa cúc hỗ trợ cải thiện giấc ngủ, còn trà gừng lại giúp tiêu hóa tốt hơn.
                         </p>
+                        <h4>Một Số Công Dụng Nổi Bật</h4>
                         <p>• Lợi Tiểu và Giảm Huyết Áp: Trà xanh giúp lợi tiểu, giảm sưng và ức chế sự hấp thu của tiểu quản thận. Các hợp chất trong trà còn giúp giảm huyết áp, rất phù hợp cho những người mắc cao huyết áp.
                         </p>
                         <p>
