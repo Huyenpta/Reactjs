@@ -7,7 +7,7 @@ function Banner() {
     <div className="banner-section">
       <Carousel fade>
         <Carousel.Item>
-          <img className="d-block w-100" src="/images/tea3.png" alt="Slide 2" />
+          <img className="d-block w-100" src="images/tea3.png" alt="Slide 2" />
           <Carousel.Caption className="custom-carousel-caption">
             <h3>Trà xanh tự nhiên</h3>
             <p>Sức khỏe từ thiên nhiên, vẻ đẹp từ bên trong.</p>

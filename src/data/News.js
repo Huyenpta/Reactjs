@@ -2,7 +2,7 @@ const News = [
   {
     id: 1,
     title: "Khám phá lợi ích sức khỏe của trà Oolong",
-    image: "/images/New1.jpg",
+    image: "images/New1.jpg",
     date: "2025-09-05",
     desc: "Trà Oolong không chỉ thơm ngon mà còn giúp giảm cân, cải thiện sức khỏe tim mạch và làm đẹp da.",
     content: `
@@ -22,14 +22,14 @@ const News = [
   {
     id: 2,
     title: "Xu hướng uống trà xanh của giới trẻ",
-    image: "/images/New2.jpg",
+    image: "images/New2.jpg",
     date: "2025-08-28",
     desc: "Ngày càng nhiều bạn trẻ lựa chọn trà xanh thay vì cà phê vì hương vị nhẹ nhàng và tốt cho sức khỏe."
   },
   {
     id: 3,
     title: "Trà đen – bí quyết tỉnh táo mỗi ngày",
-    image: "/images/New3.jpg",
+    image: "images/New3.jpg",
     date: "2025-08-15",
     desc: "Trà đen giàu chất chống oxy hóa, là lựa chọn tuyệt vời giúp tăng sự tập trung và giảm stress."
   }
