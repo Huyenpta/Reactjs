@@ -1,9 +1,25 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { FaHeart, FaShoppingBag } from "react-icons/fa";
-import products from "../data/products";   // ✅ import từ file chung
+import { FaHeart, FaShoppingBag, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import GlobalContext from "../context/context";   // ✅ dùng context
+import products from "../data/products";
 
 function SPBanChay() {
+  const { data, setData } = useContext(GlobalContext);
+
+  // Hàm thêm vào giỏ
+  const addToCart = (product) => {
+    const cart = [...data.cart];
+    const exist = cart.find((item) => item.id === product.id);
+    if (exist) {
+      exist.buy_qty += 1;
+    } else {
+      cart.push({ ...product, buy_qty: 1 });
+    }
+    setData({ ...data, cart });
+  };
+
   // Lấy 8 sản phẩm đầu tiên
   const bestSellingProducts = products.slice(0, 8);
 
@@ -32,12 +48,23 @@ function SPBanChay() {
                 <Card.Text className="text-muted mb-2">
                   {product.price.toLocaleString()}đ
                 </Card.Text>
-                <div className="mt-auto d-grid gap-2 d-sm-flex justify-content-center">
+                <div className="mt-auto d-flex justify-content-center gap-2">
+                  {/* Nút Thêm giỏ hàng */}
+                  <Button
+                    variant="success"
+                    className="rounded-pill px-3"
+                    onClick={() => addToCart(product)}
+                  >
+                    <FaCartPlus className="me-2" />
+                    Thêm
+                  </Button>
+
+                  {/* Nút Chi tiết */}
                   <Button
                     as={Link}
-                    to={`/product/${product.id}`}  // ✅ link sang trang chi tiết
+                    to={`/product/${product.id}`}
                     variant="outline-dark"
-                    className="rounded-pill px-4"
+                    className="rounded-pill px-3"
                   >
                     <FaShoppingBag className="me-2" />
                     Chi tiết
