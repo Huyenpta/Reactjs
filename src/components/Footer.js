@@ -19,9 +19,9 @@ function Footer() {
             {/* Sản phẩm */}
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Sản phẩm</h6>
-              <p><Link to="/oolong" className="text-reset">Trà Oolong</Link></p>
-              <p><Link to="/den" className="text-reset">Trà Đen</Link></p>
-              <p><Link to="/xanh" className="text-reset">Trà Xanh</Link></p>
+              <p><Link to="/category/oolong" className="text-reset">Trà Oolong</Link></p>
+              <p><Link to="/category/den" className="text-reset">Trà Đen</Link></p>
+              <p><Link to="/category/xanh" className="text-reset">Trà Xanh</Link></p>
             </div>
 
             {/* Về chúng tôi */}
