@@ -1,49 +1,71 @@
 import { useParams, Link } from "react-router-dom";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import newsData from "../data/News"; // 👈 import danh sách tin
+import { Container, Image, Card, Button } from "react-bootstrap";
+import News from "../data/News";
 
 function NewsDetail() {
-  const { id } = useParams(); // lấy id từ URL
-  const article = newsData.find((n) => n.id === parseInt(id));
+  const { id } = useParams();
+  const newsItem = News.find((n) => n.id === parseInt(id));
 
-  if (!article) {
+  if (!newsItem)
     return (
       <Container className="py-5">
-        <h2>Bài viết không tồn tại</h2>
-        <Link to="/news" className="btn btn-outline-success mt-3">
-          Quay lại Tin tức
-        </Link>
+        <p>Tin tức không tồn tại</p>
       </Container>
     );
-  }
+
+  // Split content theo 2 dòng trống để tách paragraph, giữ nguyên dấu .
+  const paragraphs = newsItem.content.split(/\n\s*\n/).filter(p => p.trim() !== "");
 
   return (
     <Container className="py-5">
-      <Row>
-        <Col lg={8} className="mx-auto">
-          <h1 className="mb-3 text-success fw-bold">{article.title}</h1>
-          <p className="text-muted">
-            {article.date} • Tác giả: {article.author}
-          </p>
-          <Image
-            src={article.image}
-            alt={article.title}
-            fluid
-            rounded
-            className="mb-4 shadow"
-          />
-          <p className="fs-5 text-start" style={{ lineHeight: "1.8" }}>
-            {article.content}
-          </p>
+      <h1 className="mb-2">{newsItem.title}</h1>
+      <p className="text-muted mb-3">
+        {newsItem.date} - {newsItem.author}
+      </p>
+      <Image src={newsItem.image} fluid className="mb-4 rounded shadow-sm" />
 
-          <div className="d-flex justify-content-between mt-4">
-            <Link to="/news" className="btn btn-outline-success">
-              ← Quay lại Tin tức
-            </Link>
-            <Button variant="success">Chia sẻ</Button>
-          </div>
-        </Col>
-      </Row>
+      <Card className="p-4 shadow-sm">
+        {paragraphs.map((para, index) => {
+          const lines = para.split("\n").filter(line => line.trim() !== "");
+          return (
+            <div key={index} style={{ marginBottom: "1rem" }}>
+              {lines.map((line, i) => {
+                const trimmed = line.trim();
+                // Nếu dòng bắt đầu bằng "-", hiển thị bullet
+                if (trimmed.startsWith("-")) {
+                  return (
+                    <li
+                      key={i}
+                      style={{
+                        textAlign: "left",
+                        marginBottom: "0.5rem",
+                        marginLeft: "1.5rem",
+                      }}
+                    >
+                      {trimmed.slice(1).trim()}
+                    </li>
+                  );
+                }
+                // Dòng bình thường
+                return (
+                  <p
+                    key={i}
+                    style={{ textAlign: "left", marginBottom: "0.8rem" }}
+                  >
+                    {trimmed}
+                  </p>
+                );
+              })}
+            </div>
+          );
+        })}
+      </Card>
+
+      <div className="mt-4">
+        <Button as={Link} to="/news" variant="secondary">
+          ← Quay lại danh sách tin
+        </Button>
+      </div>
     </Container>
   );
 }
