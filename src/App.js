@@ -42,7 +42,7 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/products" element={<ProductList />} />
               <Route path="/product/:id" element={<ProductDetail />} />
-              <Route path="/:slug" element={<Category />} />  {/* oolong, den, xanh */}
+              <Route path="/category/:slug" element={<Category />} />
               <Route path="/news" element={<TinTuc/>} />
               <Route path="/news/:id" element={<NewsDetail />} />
               <Route path="/contact" element={<Contact />} />
