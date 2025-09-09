@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { Container, Table, Button } from "react-bootstrap";
 import GlobalContext from "../context/context";
 
@@ -97,6 +98,13 @@ function Cart() {
             </tbody>
           </Table>
           <h3 className="text-end">Tổng cộng: {total.toLocaleString("vi-VN")}đ</h3>
+          {/* Tổng cộng + Nút thanh toán */}
+          <div className="d-flex justify-content-between align-items-center">
+            <h3>Tổng cộng: {total.toLocaleString("vi-VN")}đ</h3>
+            <Button as={Link} to="/checkout" variant="success">
+              Thanh toán
+            </Button>
+          </div>
         </>
       )}
     </Container>

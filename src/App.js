@@ -15,6 +15,8 @@ import ProductDetail from "./pages/ProductDetail";
 import TinTuc from "./pages/TinTuc";
 import NewsDetail from "./pages/NewsDetail";
 import Contact from "./pages/Contact";
+import Checkout from "./pages/Checkout";
+import OrderSuccess from "./pages/OrderSuccess";
 
 function App() {
   const [data, setData] = useState(() => {
@@ -46,6 +48,8 @@ function App() {
               <Route path="/news" element={<TinTuc/>} />
               <Route path="/news/:id" element={<NewsDetail />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/checkout" element={<Checkout/>}/>
+              <Route path="/order-success" element={<OrderSuccess />} />
             </Routes>
           </div>
         </main>
