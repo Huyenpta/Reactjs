@@ -24,13 +24,13 @@ function NavBar() {
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/"><FaHome className="me-2" />Trang chủ</Nav.Link>
             <Nav.Link as={Link} to="/introduce"><FaInfoCircle className="me-2" />Giới thiệu</Nav.Link>
-            
+
             <NavDropdown title={<><FaLeaf className="me-2" />Sản phẩm</>} id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/products">Xem tất cả sản phẩm</NavDropdown.Item>
               <NavDropdown.Divider />
               {/* duyệt tự động categories */}
               {categories.map((cat) => (
-                <NavDropdown.Item as={Link} to={`/${cat}`} key={cat}>
+                <NavDropdown.Item as={Link} to={`/category/${cat}`} key={cat}>
                   Trà {cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </NavDropdown.Item>
               ))}
