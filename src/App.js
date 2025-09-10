@@ -37,21 +37,19 @@ function App() {
       <NavBar />
       <div className="App">
         <main>
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/introduce" element={<Introduce />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/products" element={<ProductList />} />
-              <Route path="/product/:id" element={<ProductDetail />} />
-              <Route path="/category/:slug" element={<Category />} />
-              <Route path="/news" element={<TinTuc/>} />
-              <Route path="/news/:id" element={<NewsDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/checkout" element={<Checkout/>}/>
-              <Route path="/order-success" element={<OrderSuccess />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/introduce" element={<Introduce />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/products" element={<ProductList />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/category/:slug" element={<Category />} />
+            <Route path="/news" element={<TinTuc />} />
+            <Route path="/news/:id" element={<NewsDetail />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/order-success" element={<OrderSuccess />} />
+          </Routes>
         </main>
         <Footer />
       </div>

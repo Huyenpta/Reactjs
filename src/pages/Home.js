@@ -6,8 +6,10 @@ function Home() {
     return (
         <>
             <Banner />
-            <Product/>
-            <SPBanChay/>
+            <div className="container">
+                <Product />
+                <SPBanChay />
+            </div>
         </>
     );
 }

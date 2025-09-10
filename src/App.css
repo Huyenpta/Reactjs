@@ -68,22 +68,6 @@
   right: auto !important;
 }
 
-.banner-full-screen {
-  height: calc(100vh - 140px); /* 56px là chiều cao trung bình của một navbar Bootstrap */
-  /* Các thuộc tính khác giữ nguyên */
-  display: flex;
-  align-items: center;
-}
-
-/* Tùy chỉnh thêm để nội dung banner hiển thị đẹp hơn */
-.banner-full-screen .carousel-caption {
-  position: static; /* Thay đổi vị trí để có thể căn giữa bằng Flexbox */
-  width: 100%;
-  text-align: center; /* Căn giữa chữ */
-  top: auto;
-  bottom: auto;
-}
-
 #home {
   display: flex; /* Bật Flexbox cho container chính */
   flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
@@ -96,7 +80,7 @@
 }
 
 .banner-section img {
-  width: 100%;   /* full theo chiều ngang màn hình */
+  width: 100vh;   /* full theo chiều ngang màn hình */
   object-fit: cover; /* giữ tỉ lệ hình ảnh, không bị méo */
 }
 
