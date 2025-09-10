@@ -16,8 +16,8 @@ function NavBar() {
   }, []);
 
   return (
-    <Navbar expand="lg" bg="light" variant="light" sticky="top" className="row">
-      <Container>
+    <Navbar expand="lg" bg="light" variant="light" sticky="top">
+      <Container fluid>
         <Navbar.Brand as={Link} to="/">F2505T</Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar" />
         <Navbar.Collapse id="main-navbar">
@@ -28,7 +28,6 @@ function NavBar() {
             <NavDropdown title={<><FaLeaf className="me-2" />Sản phẩm</>} id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/products">Xem tất cả sản phẩm</NavDropdown.Item>
               <NavDropdown.Divider />
-              {/* duyệt tự động categories */}
               {categories.map((cat) => (
                 <NavDropdown.Item as={Link} to={`/category/${cat}`} key={cat}>
                   Trà {cat.charAt(0).toUpperCase() + cat.slice(1)}
